@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Component Library</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body id="light-body">
+  <h1>Sameer's component library</h1>
+  <p>This is my component library which will be used in making portfolio website</p>
+  <hr>
+
+  <h2>@typography</h2>
+  <h1>This is the biggest heading</h1>
+  <h2>This is the second biggest</h2>
+  <p>Let me show you the normal text. This is free flowing and will wrap at the end like a paragraph.</p>
+  <p>This paragraph will have a <strong>bold</strong> text</p><small>This is relatively smaller text</small>
+  <hr>
+
+  <h2>@container</h2>
+  <h3>fluid container</h3>
+  <div class="container-fluid">This is a fluid container and it will go till the end of the page</div>
+
+  <h3>center container</h3>
+  <div class="container container-center">This is a centered container and it will go till the end of the specified
+    width</div>
+  <hr>
+
+  <h2>@links</h2>
+  <a class="primary-link link" href="/">Primary Link</a>
+  <a class="secondary-link link" href="/">Secondary Link</a>
+  <hr>
+
+  <h2>@lists</h2>
+  <h3>unordered lists</h3>
+  <p>This list will not have bullets</p>
+  <ul class="list-non-bullet">
+    <li>Item One</li>
+    <li>Item two</li>
+    <li>Item three</li>
+  </ul>
+
+  <h3>unordered inline lists</h3>
+  <ul class="list-non-bullet">
+    <li class="list-item-inline">Inline Item one</li>
+    <li class="list-item-inline">Inline Item two</li>
+    <li class="list-item-inline">Inline Item three</li>
+  </ul>
+
+  <h3>Reverse ordered list</h3>
+  <ol reversed>
+    <li>Milk</li>
+    <li>Biscuits</li>
+    <li>Bread</li>
+  </ol>
+
+  <hr>
+  <h2>@nav</h2>
+  <nav class="navigation container">
+    <div class="nav-brand">SameerCodes</div>
+    <ul class="list-non-bullet nav-pills">
+      <li class="list-item-inline"><a class="link link-active" href="/">Home</a></li>
+      <li class="list-item-inline"><a class="link" href="/">Products</a></li>
+      <li class="list-item-inline"><a class="link" href="/">About</a></li>
+    </ul>
+  </nav>
+  <hr>
+
+  <h2>@header</h2>
+  <header class="hero">
+    <img class="hero-img" src="../images/hero-image.svg" alt="" />
+    <h1 class="hero-heading">Sameer the <span class="heading-inverted">Web Developer</span></h1>
+  </header>
+
+  <h2>@sections</h2>
+  <section class="section">
+    <div class="container container-center">
+      <h1>white section</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit quis tempore magni nisi consectetur corporis
+        porro nostrum qui expedita unde ut enim, quo iusto illum laborum adipisci dolorum! Cum quas maiores consequuntur
+        dolorum amet commodi beatae laudantium ad sit, itaque suscipit nostrum temporibus tempora saepe officiis laborum
+        animi quisquam magni!</p>
+    </div>
+
+  </section>
+
+  <section class="section ow">
+    <div class="container container-center">
+      <h1>off white section</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, cum quae nisi nostrum dolore, temporibus
+        exercitationem aut expedita animi, quo accusamus assumenda? Magni id, corrupti molestias maxime mollitia optio
+        quaerat asperiores ullam quas distinctio ad debitis laboriosam neque maiores! Expedita explicabo doloribus vero
+        molestiae? Aliquid laudantium suscipit ullam ipsam reprehenderit!</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <h2>@card</h2>
+  <div class="card">
+    <img src="./images/hero-image.svg" alt="">
+    <h2 class="card-title">Title</h2>
+    <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ipsa rerum voluptas
+      magni deserunt illum quis accusamus quidem, veritatis aperiam autem, recusandae eos at reprehenderit a quas
+      quaerat necessitatibus expedita.</p>
+    <a href="#" class="link secondary-link">Code</a>
+    <a href="#" class="link primary-link">Live</a>
+  </div>
+
+  <hr />
+
+  <h2>@checkbox</h2>
+  <div class="toggle-container">
+    <input id="toggle" type="checkbox">
+    <label class="toggle-label" for="toggle"></label>
+  </div>
+  <hr>
+
+
+  <h2>@chip</h2>
+  <div class="chip">chip content</div>
+  <hr>
+
+  <h2>@footer</h2>
+  <footer class="footer">
+    <div class="footer-header">Some small heading inside footer Lorem ipsum dolor sit amet.</div>
+    <ul class="social-links list-non-bullet">
+      <li class="list-item-inline"><a class="link" href="">SocialOne</a></li>
+      <li class="list-item-inline"><a class="link" href="">SocialTwo</a></li>
+      <li class="list-item-inline"><a class="link" href="">SocialThree</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    function onToggleHandler() {
+      var isChecked = this.checked;
+      localStorage.setItem("isDarkMode", isChecked);
+      document.querySelector("body").id = isChecked ? "dark-body" : "light-body";
+    }
+    document.querySelector("#toggle").addEventListener('change', onToggleHandler);
+  </script>
+
+</body>
+
+</html>
